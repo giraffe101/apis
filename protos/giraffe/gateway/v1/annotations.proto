@@ -6,7 +6,7 @@ import "giraffe/common/v1/user.proto";
 import "giraffe/gateway/v1/http.proto";
 import "google/protobuf/descriptor.proto";
 
-option go_package = "giraffe/gateway/v1";
+option go_package = "github.com/giraffe101/apis/gateway/v1";
 
 extend google.protobuf.MethodOptions {
   HttpAnonymous anonymous = 1000;

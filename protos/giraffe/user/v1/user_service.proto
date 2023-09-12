@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package giraffe.user.v1;
 
-option go_package = "giraffe/user/v1";
+option go_package = "github.com/giraffe101/apis/user/v1";
 
 service UserService {
   rpc VerifyUser(VerifyUserRequest) returns (VerifyUserResponse) {}

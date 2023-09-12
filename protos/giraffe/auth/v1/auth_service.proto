@@ -5,7 +5,7 @@ package giraffe.auth.v1;
 import "giraffe/gateway/v1/annotations.proto";
 import "google/api/annotations.proto";
 
-option go_package = "giraffe/auth/v1";
+option go_package = "github.com/giraffe101/apis/auth/v1";
 
 service AuthService {
   rpc Login(LoginRequest) returns (LoginResponse) {
