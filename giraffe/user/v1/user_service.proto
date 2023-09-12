@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package giraffe.user.v1;
+
+option go_package = "giraffe/user/v1";
+
+service UserService {
+  rpc VerifyUser(VerifyUserRequest) returns (VerifyUserResponse) {}
+  rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+}
+
+message VerifyUserRequest {
+  string user_type = 1;
+  string login_id = 2;
+  string password = 3;
+}
+
+message VerifyUserResponse {
+  string code = 1;
+  string message = 2;
+  User data = 3;
+
+  message User {
+    string id = 1;
+    string type = 2;
+  }
+}
+
+message GetUserRequest {
+  int64 id = 1;
+}
+
+message GetUserResponse {
+  string code = 1;
+  string message = 2;
+  User data = 3;
+
+  message User {
+    string id = 1;
+    string user_type = 2;
+    string username = 3;
+    string nickname = 4;
+    string avatar_url = 5;
+  }
+}

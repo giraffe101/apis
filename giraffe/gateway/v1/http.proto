@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package giraffe.gateway.v1;
+
+option go_package = "giraffe/gateway/v1";
+
+message HttpAnonymous {}
+
+message HttpEmployee {
+  repeated string codes = 1;
+}
+
+message HttpUser {
+  repeated string codes = 1;
+}

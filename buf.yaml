@@ -1,0 +1,4 @@
+version: v1beta1
+name: github.com/giraffe101/apis
+deps:
+  - buf.build/googleapis/googleapis
